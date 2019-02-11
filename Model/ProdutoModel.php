@@ -5,22 +5,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+include_once 'GenericModel.php';
 /**
+ * Description of ProdutoModel
  *
- * @author dennis.silva
+ * @author dennisclementino
  */
-interface IBussiness {
+class ProdutoModel extends GenericModel{
     //put your code here
-    
-     public function salve();
-    
-    public function listAll();
-    
-    public function listId();
-    
-    public function delete();
-    
-    public function update();
+    public function __construct() {
+        parent::__construct('produto');
+    }
     
 }

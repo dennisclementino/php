@@ -7,14 +7,13 @@
  */
 
 /**
- * Description of pedido
  *
- * @author dennis.silva
+ * @author dennisclementino
  */
-?>
-<html>
-    <header><title> Minha vendinha</title></header>
-    <body>
-        
-    </body>
-</html>
+interface IEntity {
+    //put your code here
+    
+    public function getObjArray();
+  
+    
+}

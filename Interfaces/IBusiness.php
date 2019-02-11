@@ -7,10 +7,14 @@
  */
 
 /**
- * Description of ModelProdutoPedido
  *
- * @author dennis.silva
+ * @author dennisclementino
  */
-class ModelProdutoPedido {
+interface IBusiness {
     //put your code here
+    public function save();
+    public function edit();
+    public function delete();
+    public function listAll();
+            
 }

@@ -5,20 +5,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-include './ControllerPedido.php';
-include './ControllerProduto.php';
-include './ControllerProdutoPedido.php';
 
+if (isset($_GET["action"])) {
 
-if (isset($_GET['controller'])) {
+    if (isset($_GET["method"])) {
 
-    $controller = $_GET['controller'];
-    $action = $_GET['action'];
-
-    if ($controller == 'produto' && $action=='list') {
-        $produtoController = new ControllerProduto();
+        $action = (string) $_GET['action'];
+        $class = ucfirst(strtolower($action)) . "Controller";
         
-        $produtoController->listAll();
-        
+        include_once $class . ".php";
+
+        $method = (string) $_GET['method'];
+        $obj = new $class();
+        if (method_exists($obj, $method)) {
+            call_user_func(array($obj, $method));
+        }
     }
 }

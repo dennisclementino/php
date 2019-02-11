@@ -7,10 +7,14 @@
  */
 
 /**
- * Description of ControllerProdutoPedido
  *
- * @author dennis.silva
+ * @author dennisclementino
  */
-class ControllerProdutoPedido {
+interface IModel {
     //put your code here
+    public function save($data);
+    public function edit($data);
+    public function delete($data);
+    public function listAll($data);
+    public function listBy($data);
 }
